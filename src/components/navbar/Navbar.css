@@ -1,0 +1,278 @@
+.navContainer {
+    height: 12vh;
+    width: 100%;
+    padding: 2rem;
+    z-index: 10000000;
+    background: white;
+    /* border: 1px solid black; */
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    top: 0;
+    /* background-color: red; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navContainer li {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-left {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.rightHover {
+    position: relative;
+}
+
+.rightHover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    color: red;
+    transition: width 0.2s ease;
+}
+
+.rightHover:hover::before {
+    width: 100%;
+}
+
+.navList1::before {
+    content: "FIND A STORE";
+}
+
+.navList2::before {
+    content: "HELP";
+}
+
+.navList3::before {
+    content: "JOIN US";
+}
+
+.navList4::before {
+    content: "SIGN IN";
+}
+
+.nav2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 1vw;
+
+}
+
+.middle {
+    display: flex;
+    z-index: 11;
+    justify-content: space-evenly;
+    width: 60%;
+    position: relative;
+}
+
+.nav2-left {
+    display: flex;
+    gap: 1rem;
+    width: 20%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav2-right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20%;
+}
+
+.nav2-left .nav2-left-input {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.nav2-left-input {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav2-left .nav2-left-input input {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 35px;
+    border: none;
+    outline: none;
+    background-color: #e5e5e5;
+}
+
+.nav2-left .nav2-left-input input:focus {
+    outline: none;
+}
+
+.nav2-left-input .search-icon {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.nav2-left .nav-left-icon {
+ font-size: 24px;
+}
+
+#nav-bottom {
+    position: absolute;
+    height: 0vh;
+    width: 60%;
+    top: 110px;
+    border-bottom: 1px solid #dadada;
+    left: 15%;
+    /* gap: 2vw; */
+    z-index: 9;
+    background-color: rgb(255, 255, 255);
+    transition: all ease-out 0.09s;
+}
+.nav2-middle-elem{
+    display: flex;
+    z-index: 11;
+    flex-direction: column;
+    width: 60%;
+}
+.nav2-middle-elem h5 {
+    margin-bottom: 1.2vw;
+    display: none;
+    overflow: hidden;
+}
+
+.nav2-middle-elem h5 span {
+    font-size: 0.75vw;
+    font-weight: 400;
+    display: inline-block;
+    transform: translateY(25px);
+}
+
+.nav2-middle-elem h4 {
+    margin-bottom: 2vw;
+}
+.nav2-right svg{
+    position: relative;
+    top: -20px;
+}
+.hidden-search-icon{
+    display: none;
+}
+
+@media(max-width:1200px) {
+    .nav2-left-input{
+        display: none;
+    }
+    .hidden-search-icon{
+        display: block;
+        font-size: 24px;
+    }
+}
+.hidden-searchbarContainer{
+    width: 100%;
+    height: 100%;
+}
+.hidden-searchbar{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 250%;
+    align-items: flex-start;
+    box-sizing: border-box;
+    z-index: 999;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    padding: 0 1rem;
+    margin-top: 20px;
+    animation: move 0.7s linear forwards;
+}
+.hidden-searchbar-input{
+    height: 40px;
+    background-color: rgb(250, 250, 250);
+    width: 50%;
+    border-radius: 20px;
+    position: relative;
+}
+@keyframes move {
+    0% {
+        transform: translate(100%, 20%); /* Start from the right and 20% down from the top */
+    }
+    50% {
+        transform: translate(0, 20%); /* Move horizontally to the left, stay at 20% from the top */
+    }
+    100% {
+        transform: translate(0, 0); /* Move vertically to the top */
+    }
+}
+.hidden-searchbar-input input{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    background-color: #e5e5e5;
+}
+.hidden-searchbar-input-searchicon .hidden-searchbar-searchicon{
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    font-size: 24px;
+}
+.hidden-searchbar-Nikelogo svg{
+    height: 100px;
+    width: 100px;
+
+}
+.hidden-searchbar-Nikelogo{
+    position: relative;
+    top: -30px;
+}
+.hidden-searchbarContainer{
+    display: none;
+}
+.search_option{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.search_option li:nth-child(1) span {
+    font-size: 15px;
+    color: #aeabab;
+    text-transform: capitalize;
+}
+.search_option li:not(:first-child) span {
+    font-size: 23px;
+    text-transform: capitalize;
+}
