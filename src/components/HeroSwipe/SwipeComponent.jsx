@@ -301,7 +301,7 @@ function SwipeComponent() {
           // onSlidePrevTransitionStart={Handlebackward}
         >
           <div className="BgText " ref={blurContainer} id="blurContainer">
-            <div className="textOnHeroSectionSmall absolute text-[15px] w-[10rem] leading-[100%] text-black right-[22%] top-[70%] font-[500]">
+            <div className="textOnHeroSectionSmall absolute text-[20px] w-[15rem] leading-[100%] text-black right-[20%] top-[70%] font-[500]">
               Unleash Your Potential with Nike: Performance, Style, Innovation,
               and Comfort
             </div>
