@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+.navContents {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 999999999;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 1;
+}
+.navMiddle {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.nleft {
+  width: 13%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  padding: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+.nright {
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.navlistnames {
+  font-family: "Roboto Slab", serif;
+}
+.navlistseperator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navdefault {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.navdefaultleft {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navdefaultright {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  user-select: none;
+}
+
+.navimgcontainer {
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.navimgcontainer img {
+  height: 100%;
+  position: relative;
+  right: 20px;
+  border-radius: 20px;
+}
+.navtextcontainer {
+  font-family: "Roboto Slab", serif;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 110%;
+  text-align: right;
+  font-size: 8rem;
+}
+.navvideocontainer {
+  height: 135px;
+  /* width: 430px; */
+  width: 0;
+  margin-left: 1rem;
+  border-radius: 20px;
+  margin-top: 0.4rem;
+  overflow: hidden;
+  border: 1px solid white;
+}
+.navvideocontainer .video {
+  position: relative;
+  top: -3rem;
+}
+.searchcontainer {
+  position: absolute;
+  right: 59px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 400px;
+  height: 45px;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+.searchcontainer input {
+  width: 85%;
+  padding-left: 25px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+.searchcontainer .searchright {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchcontainer ::placeholder {
+  font-size: 0.85rem;
+}
+.subpoint {
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgb(105, 105, 105);
+  opacity: .7;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #9d9d9d rgba(0, 0, 0, 0);
+}

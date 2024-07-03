@@ -1,0 +1,108 @@
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: -4px;
+  left: 0;
+  z-index: 99999999;
+  pointer-events: none;
+  scale: 1.1;
+}
+/* .overlaySvg path {
+  fill: black;
+} */
+.navarea {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 999999;
+  width: 100%;
+}
+.menuicon {
+  font-size: 1.6rem;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 99999999991;
+  transition: 0.2s all linear;
+}
+.overlay svg {
+  fill: rgba(0, 0, 0, 0.6);
+}
+.navarea-option {
+  display: flex;
+  gap: 1rem;
+}
+
+.navarea-option {
+  text-transform: uppercase;
+  position: relative;
+}
+
+.hoverEffect {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .hoverEffect {
+    font-size: 0.8rem;
+  }
+}
+.navlist1::before {
+  content: attr(data-text1);
+  position: absolute;
+  color: red;
+  height: 100%;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  white-space: nowrap;
+}
+.navlist1:hover::before {
+  width: 100%;
+}
+.navlist2::before {
+  content: attr(data-text2);
+  position: absolute;
+  color: red;
+  height: 100%;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  white-space: nowrap;
+}
+.navlist2:hover::before {
+  width: 100%;
+}
+.navlist3::before {
+  content: attr(data-text3);
+  position: absolute;
+  color: red;
+  height: 100%;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  white-space: nowrap;
+}
+.navlist3:hover::before {
+  width: 100%;
+}
+.navlist4::before {
+  content: attr(data-text4);
+  position: absolute;
+  color: red;
+  height: 100%;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  white-space: nowrap;
+}
+.navlist4:hover::before {
+  width: 100%;
+}
