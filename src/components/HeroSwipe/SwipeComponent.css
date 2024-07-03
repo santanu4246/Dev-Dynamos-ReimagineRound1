@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+:root {
+  --background-image-url: url("../../assets/pattern.jpeg");
+}
+.Bg-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  overflow: hidden;
+  /* background-image: var(--background-image-url);
+  background-repeat: no-repeat;
+  background-size:cover;
+  backdrop-filter: grayscale(10%); */
+  position: relative;
+  top: 0;
+  z-index: 990000;
+  background-color: #f4f2f0;
+}
+.my-swiper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.SwipeDiv {
+  width: 576px;
+  height: auto;
+  transition: all 0.3s linear;
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.HeroShoe {
+  width: 100%;
+  height: 100%;
+  scale: 0.9;
+  object-fit: contain;
+  z-index: 3;
+  rotate: -13deg;
+  image-rendering: smooth;
+  position: relative;
+  top: 30%;
+  animation: heromove 6s linear 1s infinite alternate-reverse;
+}
+
+.PlatformImg {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  pointer-events: none;
+  object-fit: contain;
+  position: relative;
+  top: -20%;
+}
+
+.Btn {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  z-index: 10;
+  border: 1px solid red;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+.Btn:hover {
+  color: white;
+}
+.Next {
+  top: 50%;
+  right: 25%;
+}
+.Prev {
+  top: 50%;
+  left: 25%;
+}
+.BgText {
+  /* border: 1px solid; */
+  font-family: tektur;
+  line-height: 85%;
+  font-weight: 700;
+  position: absolute;
+  top: 10%;
+  font-size: 8vw;
+  text-align: center;
+  /* color: #e13251; */
+  /* padding: 7rem; */
+  padding-top: 5rem;
+  height: 80%;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid; */
+}
+@media (min-width: 768px) {
+  .BgText p {
+    /* border: 1px solid; */
+    min-width: 150%;
+    text-align: center;
+    /* background: linear-gradient(to left, #e0e0e0 20%, #ff0000 50%, #e0e0e0 80%); */
+    background: linear-gradient(to left, #cac9c9 20%, #ff0000 50%, #cac9c9 80%);
+    /* background: radial-gradient(circle at 50% 100%, #e13251 ,#efebe7 ); */
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0.4;
+  }
+}
+/* #efebe7  */
+.heroBlur {
+  height: 300px;
+  width: 300px;
+  filter: blur(120px);
+  background-color: #e13251;
+  position: absolute;
+  top: 0;
+  transition: scale ease-in-out 0.2s;
+}
+.NikeLogoBg {
+  scale: 7;
+  position: relative;
+  z-index: -1;
+  margin-top: 20%;
+  filter: blur(0px);
+}
+.lengthdiv1 {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  background-color: #e13251;
+  left: -5%;
+  transition: all 0.1s linear;
+  border-radius: 50px;
+}
+.lengthdiv2 {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  background-color: #e13251;
+  right: -5%;
+  transition: all 0.1s linear;
+  border-radius: 50px;
+}
+.SlideNavArrow {
+  z-index: 20;
+}
+.flashLightEffectDiv {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: yellow;
+}
+
+@media (max-width: 768px) {
+  .Btn {
+    top: 85%;
+    scale: 0.9;
+  }
+}
+
+@media (max-width: 1300px) {
+  .textOnHeroSectionSmall {
+    opacity: 0;
+  }
+}
+
+#mobileViewTextYeh {
+  /* border: 1px solid; */
+  min-width: 150%;
+  text-align: center;
+  /* background: linear-gradient(to left, #e0e0e0 20%, #ff0000 50%, #e0e0e0 80%); */
+  background: linear-gradient(to bottom, #efebe7 5%, #ff0000 100%);
+  /* background: radial-gradient(circle at 50% 100%, #e13251 ,#efebe7 ); */
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+}
+
+@keyframes heromove {
+  50% {
+    transform: translate(20px, 20px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.SmallIndicatingProduct {
+  position: absolute;
+  z-index: 9;
+  transform: translate(-420%, 250%) rotate(0deg);
+  scale: 0.2;
+  /* -webkit-box-reflect: below -50%; */
+  animation: Smallmovement 5s linear 1s infinite alternate-reverse;
+}
+.SmallIndicatingProduct:nth-child(2) {
+  transform: translate(-400%, 260%) rotate(-30deg);
+}
+
+.SmallIndicatingProduct:nth-child(3) {
+  transform: translate(400%, -260%) rotateY(-180deg) rotate(0deg);
+  animation: Smallmovement2 5s linear 1s infinite alternate-reverse;
+}
+.SmallIndicatingProduct:nth-child(4) {
+  transform: translate(440%, -270%) rotateY(-180deg) rotate(-30deg);
+  animation: Smallmovement2 5s linear 1s infinite alternate-reverse;
+}
+
+@keyframes Smallmovement {
+  50% {
+    transform: translate(-440%, 280%);
+  }
+}
+@keyframes Smallmovement2 {
+  50% {
+    transform: translate(400%, -280%) rotateY(-180deg) rotate(0deg);
+  }
+}
+
+
+.myswiperv2{
+  font-size: 700;
+ text-align: center;
+  font-family: tektur;
+  color:white;
+}
+.NameShoeonSwipe{
+  position: absolute;
+  width:8rem;
+  height: 1.5rem;
+  border-radius: 30px;
+  transform: translate(150%, 100%)rotate(-10deg);
+  background-color: red;
+  z-index: 999999999 !important;
+  opacity: .7;
+}

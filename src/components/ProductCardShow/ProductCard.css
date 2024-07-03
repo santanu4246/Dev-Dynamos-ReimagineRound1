@@ -1,0 +1,176 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+} */
+
+.bgContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: blur(50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  /* -webkit-backdrop-filter: blur(20px); */
+  backdrop-filter: blur(10px);
+}
+.mySwiper {
+  width: 100% !important;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mySwiperSlide {
+  height: 60% !important;
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProductImages {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  border-radius: 50px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  background-repeat: no-repeat;
+  background-size:contain;
+  padding-bottom: 1.2rem;
+  padding-top: 1.2rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1), -2px 0 10px rgba(0, 0, 0, 0.1); /* orrin */
+}
+
+
+
+
+.swiper-slide-next .ProductImages {
+    scale:0.9
+  }
+ 
+.swiper-slide-next + * .ProductImages{
+   opacity:0;
+}
+.swiper-slide-next + * + * .ProductImages{
+    opacity:0;
+  
+ }
+
+ .swiper-slide-next + * + * + * .ProductImages{
+    opacity:0;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper-slide-prev>.ProductImages {
+    scale:0.9;
+}
+.mySwiperSlide:has( + .swiper-slide-prev + * ) > .ProductImages{
+   opacity: 0;
+}
+.mySwiperSlide:has(+ * + .swiper-slide-prev + *  ) > .ProductImages{
+    opacity: 0;
+ }
+ .mySwiperSlide:has( + * + * + .swiper-slide-prev + *  ) > .ProductImages{
+    opacity: 0;
+ }
+
+
+.swiper-pagination{
+  position: absolute !important;
+  top:85% !important;
+ z-index: 9;
+}
+
+
+
+
+
+
+
+.ShoeName{
+  font-size: 2rem;
+  color:white
+  
+}
+
+
+.SwipeSee{
+  width: fit-content;
+  height: 50px;
+  border-radius: 50px;
+  position:absolute;
+  z-index: 9;
+  transform: translate(-200%,-400%)rotate(-15deg);
+  backdrop-filter: blur(50px);
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SwipeSee>span{
+  font-family: tektur;
+  font-size: 1.2rem;
+  color:black;
+  font-weight: bolder;
+}
+
+
+.BuyNow{
+  width: fit-content;
+  height: max-content;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bolder;
+  font-family: tektur;
+  background-color:white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(50px);
+  transition: all 0.2s linear;
+}
+.BuyNow::before{
+  width: 0%;
+  height: 100%;
+  content:"BUY NOW";
+  position: absolute;
+  top:0px;
+  left: 0px;
+  padding-top: 0.5rem;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: all 0.2s linear;
+  white-space: nowrap;
+  background-color: rgb(160, 160, 160);
+}
+.BuyNow:hover::before{
+  width: 100%;
+   overflow: hidden;
+}
+
+.faviconProdSec:hover{
+  fill:pink;
+}
