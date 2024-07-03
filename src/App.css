@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+#main {
+  position: relative;
+  overflow: hidden;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+@media screen and (max-width: 767px) {
+  .cursor {
+    opacity: 0;
+  }
+}
+
+.blureffect {
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(17, 25, 40, 0.1);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  z-index: 99999999;
+  opacity: 0;
+  /* display: none; */
+  transition: opacity 1s linear;
+  pointer-events: none;
+}
+
+.strokeText {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+.strokeTextGray {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px rgb(172, 163, 163);
+}
+@media (max-width: 768px) {
+  .strokeText {
+    -webkit-text-stroke: 0.7px white;
+  }
+}
+.textAnimationSectionContainer div {
+  font-size: 7vw;
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+}
+
+.kalam {
+  font-family: kalam;
+  font-weight: 700;
+  font-style: normal;
+}
